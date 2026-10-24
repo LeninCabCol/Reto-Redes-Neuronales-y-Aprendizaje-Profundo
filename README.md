@@ -53,9 +53,10 @@ Las tres se entrenan con Adam, `lr = 0.0001`, 20 épocas, lotes de 64 y la misma
 ├── .gitignore
 ├── README.md
 ├── requirements.txt # Dependencias de Python
-├── data/            # Imágenes de EuroSAT (se genera al correr datos.ipynb, no se sube a git)
+├── data/            # Imágenes de EuroSAT (se genera al correr el notebook final o datos.ipynb, no se sube a git)
 ├── docs/            # Reporte final
 ├── notebooks/
+│   ├── equipo_proyecto_final.ipynb    # Notebook final: descarga, MLP, CNN, aumento de datos y evaluación
 │   ├── datos.ipynb                    # Descarga EuroSAT desde Kaggle y guarda los .jpg por clase
 │   ├── redFFbaseline.ipynb            # MLP base y 4 experimentos de hiperparámetros (R1–R4)
 │   └── equipo3_proyecto_avance4.ipynb # MLP base + CNN, aumento de datos y evaluación final en prueba
@@ -91,9 +92,9 @@ Las tres se entrenan con Adam, `lr = 0.0001`, 20 épocas, lotes de 64 y la misma
 
    Si se quiere usar GPU, instalar `torch` con la versión de CUDA que corresponda desde [pytorch.org](https://pytorch.org/get-started/locally/).
 
-3. Descargar la base de datos. Abrir y ejecutar `notebooks/datos.ipynb`. Crea `data/EuroSAT/<clase>/*.jpg` y requiere acceso a Kaggle a través de `kagglehub`. Si las imágenes ya existen, no se vuelven a descargar.
+3. Descargar la base de datos. La primera sección de `notebooks/equipo_proyecto_final.ipynb` (o `notebooks/datos.ipynb`) la descarga. Crea `data/EuroSAT/<clase>/*.jpg` y requiere acceso a Kaggle a través de `kagglehub`. Si las imágenes ya existen, no se vuelven a descargar.
 
-4. Ejecutar los modelos:
+4. Ejecutar los modelos. Lo más simple es correr `notebooks/equipo_proyecto_final.ipynb` completo (*Restart & Run All*), que incluye todo lo siguiente y genera además `resultados/figures/ejemplos_clases.png`. Por separado:
    - `notebooks/redFFbaseline.ipynb`: entrena el MLP base y los experimentos R1–R4.
    - `notebooks/equipo3_proyecto_avance4.ipynb`: reproduce la comparación completa MLP vs. CNN y guarda resultados, figuras y modelos en `resultados/`.
 
