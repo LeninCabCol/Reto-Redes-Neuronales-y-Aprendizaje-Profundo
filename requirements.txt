@@ -1,0 +1,13 @@
+# Entorno: torch-env (Python 3.11.15)
+# torch se instaló en el entorno original con CUDA 12.6 (2.14.1+cu126).
+# Para GPU, instalar torch desde https://pytorch.org/get-started/locally/
+torch==2.14.1
+numpy==2.4.4
+pandas==3.0.2
+matplotlib==3.10.8
+scikit-learn==1.8.0
+pillow==12.1.1
+kagglehub==1.0.2
+ipython==9.4.0
+ipykernel==6.30.1
+jupyterlab==4.5.6
